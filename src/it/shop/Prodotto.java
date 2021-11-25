@@ -1,6 +1,7 @@
 package it.shop;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class Prodotto {
 	
@@ -19,6 +20,7 @@ public class Prodotto {
 		this.price = basePrice();
 		this.iva = ivaPriceCalculator();
 		this.name = extendedName();
+		
 	}
 	
 	
@@ -95,16 +97,19 @@ public class Prodotto {
 	}
 	
 	public int basePrice() {
-		return price;
+		Random rand = new Random();
+		return rand.nextInt(101);
 	}
 	
 	public int ivaPriceCalculator() {
-		return price + (price * iva / 100);
+		return price + (price * 22 / 100);
 	}
 	
 	private String extendedName() {
-		return code + name;
+		
+	
+		return name + code;
 	}
 	
-
+	
 }
