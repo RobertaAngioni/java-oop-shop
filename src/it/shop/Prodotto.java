@@ -99,7 +99,7 @@ public class Prodotto {
 	}
 	
 	public int ivaPriceCalculator() {
-		return price + iva;
+		return price + (price * iva / 100);
 	}
 	
 	private String extendedName() {
